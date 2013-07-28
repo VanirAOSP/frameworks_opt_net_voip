@@ -25,6 +25,8 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src/java) \
 LOCAL_JNI_SHARED_LIBRARIES := librtp_jni 
 LOCAL_REQUIRED_MODULES := librtp_jni
 
+LOCAL_CFLAGS += -fno-strict-aliasing -Wno-error=strict-aliasing
+
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := voip-common
 
